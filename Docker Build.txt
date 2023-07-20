@@ -1,0 +1,23 @@
+Build an Image:
+1. Create a Dockerfile inside the directory
+2. Inside the directory, run docker build .
+    - To get the image id, use DOCKER_BUILDKIT = 0
+
+Except the first step, to run the other steps, docker creates an intermediate container
+
+To run the RUN command, 
+- It creates an intermediate container using the base image
+- Inside this intermediate container, we run the second command line 
+- It downloaded and create a folder for redis 
+- Once completed, we stop the container. We take a Filesystem snapshot and create a temporary image
+
+Tagging the Image :
+docker build -t vinaysin/redis:latest
+
+Port Forwarding
+- Though container can access outside info, we need to create mapping to allow outside traffic inside container
+- This is a runtime operation 
+
+docker run -p 8080:8080 image_name
+
+-p from port : to port 

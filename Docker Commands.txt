@@ -1,0 +1,32 @@
+Basic Docker Concepts & Commands:
+1. When referring to docker, we usually refer to the complete docker ecosystem. These are:
+	a. Docker Client(CLI)
+	b. Docker Server
+	c. Docker Machine
+	d. Docker Images
+	e. Docker Hub
+	f. Docher Compose
+
+2. Docker is used to create or run containers
+3. Container is a lightweight, standalone, executable package of software that includes everything needed to run an application
+	- It uses Linux Namespacing & Control Group
+	- Namespacing is used to isolate the resources
+	- Control Group is used to limit the amount of resource used by a process
+
+4. Images usually contains File System Snapshots and Start Command
+5. Since Windows and Mac does not support Namespacing, docker usually run on Linux VM installed on the Windows/Mac OS
+
+Docker Commands:
+1. docker run image_name
+	a. docker run = docker create + docker start 
+2. docker create image_name = gives the name of the container
+3. docker start -a container_id
+4. docker ps = gives the list of all the active containers
+5. docker ps -all = gives the list of all containers
+6. docker system prune - delete all containers along with the cache images
+7. docker stop 
+	- send the SIGTERM command and thus gives few seconds to the process to close
+8. docker kill = immediately stops the process
+9. docker exec -it container_id {command}
+	- it refers to input and output
+	- command can be sh to access the container's shell
