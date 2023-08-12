@@ -3,7 +3,7 @@
 This repository contains code examples and tutorials related to Docker and Kubernetes. It aims to help you understand and practice containerization and orchestration techniques using these powerful tools.<br>
 
 ## Content
-1. A simple web application build using Docker
+1. A simple node js application build using Docker
 2. Visit counter application using Docker
 
 
